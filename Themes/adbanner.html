@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad-banner</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: #ececec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+        .banner
+        {
+            position: relative;
+            height: 300px;
+            width: 90%;
+            /* border: 2px solid #000; */
+            box-shadow: 20px 20px 40px rgba(0,0,0,0.7),20px 20px 40px rgba(0,0,0,0.7);
+            transition: 0.3s;
+        }
+        .imgbox
+        {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .imgbox img
+        {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .info
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300px;
+            width: 70%;
+            background: linear-gradient(to right , rgba(0,0,0,0.9), rgba(0,0,0,0.8) , transparent);
+            overflow: hidden;
+        }
+        .info h1
+        {
+            color: #ff0;
+            font-family: sans-serif;
+            margin-left: 25px;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            animation: slide ;
+        }
+        .info .para
+        {
+            position: relative;
+            height: 200px;
+            width: 50%;
+        }
+        .info p
+        {
+            color: #fff;
+            font-family: sans-serif;
+            line-height: 1.5em;
+            padding-left: 25px;
+            opacity: 0;
+        }
+        .info .slide1
+        {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            background:  linear-gradient(to right , rgba(0,0,0,0.7), rgba(0,0,0,0.7) , transparent);
+            overflow: hidden;
+            opacity: 1;
+            
+        }
+        .slide1 h1
+        {
+            animation: slide1 7s;
+            animation-fill-mode: forwards;
+        }
+        .slide1 p
+        {
+            animation: slide1 7s;
+            animation-delay: 0.2s;
+            animation-fill-mode: forwards;
+        }
+        .slide2
+        {
+            
+            position: relative;
+            width: 100%;
+            height: 300px;
+            /* background:  linear-gradient(to right , rgba(0,0,0,0.7), rgba(0,0,0,0.7) , transparent); */
+            opacity: 0;
+            animation: slide2 7s;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+            overflow: hidden;
+          
+        }
+        .slide2 h1
+        {
+            animation: slide2 7s;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+            overflow: hidden;
+        }
+        .slide2 .list1 ul
+        {
+            list-style: none;
+            color: #fff;
+            opacity: 0;
+            margin-left: -15px;   
+            animation: slide2 7s;
+            animation-fill-mode: forwards;
+            animation-delay: 4.2s;
+            overflow: hidden;
+        }
+        .slide2 .list1 li
+        {
+            margin: 15px;
+            margin-left: 0px;
+        }
+       .list2 ul
+       {
+           position: relative;
+             list-style: none;
+            color: #fff;
+            margin-top: -195px;
+            margin-left: 85px;   
+            animation: slide2 7s;
+            animation-fill-mode: forwards;
+            animation-delay: 4.5s;
+            overflow: hidden;   
+            opacity: 0;
+       }
+       .slide2 .list2 li
+        {
+            margin: 15px;
+            margin-left: 0px;
+        }
+        @keyframes slide1
+        {
+            0%
+            {
+                transform:translateY(100px);
+                opacity: 0;
+            }
+            5%
+            {
+                
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            50%
+            {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            55%
+            {   
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100%
+            {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+        @keyframes slide2
+        {
+            0%
+            {
+                transform:translateY(100px);
+                opacity: 0;
+            }
+            5%
+            {
+                
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            50%
+            {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            55%
+            {   
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100%
+            {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="imgbox">
+            <img src="pics/laguna-5413412_1920.jpg" alt="">
+        </div>
+        <div class="info">
+                <div class="slide1">
+                    <h1>
+                        Travelx
+                    </h1>
+                    <p class="para">
+                        The world is a book, and those who do not travel read only a page.” – said Saint Augustine. Travelling can teach you more than any university course. You learn about the culture of the country you visit. If you talk to locals, you will likely learn about their thinking, habits, traditions and history as well.
+                        If you travel, you will not only learn about foreign cultures, but about your own as well. 
+
+                    </p>
+                </div>
+                <div class="slide2">
+                    <h1>Places To Explore</h1>
+                   <div class="list1">
+                    <ul>
+                        <li>London</li>
+                        <li>New York</li>
+                        <li>Dubai</li>
+                        <li>Maldives</li>
+                        <li>Peru</li>
+                       
+                        
+                        
+                    </ul>
+                </div>
+                    <div class="list2">
+
+                    
+                    <ul >
+                        <li>Paris</li>
+                        <li>Colosseum, Rome</li>
+                        <li>Bora Bora</li>
+                        <li>Iceland</li>
+                        <li>The Grand Canyon</li>
+                    </ul>
+                </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
