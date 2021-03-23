@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Icons</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color:#111;
+        }
+        ul
+        {
+            display: inline-flex;
+            list-style: none;
+        }
+        ul li{
+            margin: 45px;
+            color:#222;
+            font-size: 40px;
+            height: 50px;
+            width: 70px;
+            margin-top: 12px;
+            margin-left: 20px;
+            background: transparent;
+        }
+        i{
+            background: transparent;
+        }
+
+        .box
+        {
+            margin-left: 50px;
+            margin-right: 50px;
+            height: 75px;
+            width: 75px;
+            background:transparent;
+            border-radius: 50%;
+            position: relative;
+            border: 2px solid #222;
+        }
+    </style>
+
+    <script>
+        var i = '';
+        function glow(i)
+        {
+            var ic = document.getElementById("icon"+i);
+            var bg = document.getElementById("bg"+i);
+            bg.style.cursor = 'pointer';
+            bg.style.boxShadow = '0 0 40px #2196f3, 0 0 40px #2196f3';
+            // ic.style.textShadow = '0 0 20px #ffde17, 0 0 20px #ffde17';
+            ic.style.color = '#2196f3';
+            bg.style.transition = '0.5s';
+            ic.style.transition = '0.5s';
+            
+        }
+        function normal(i)
+        {
+            var ic = document.getElementById("icon"+i);
+            var bg = document.getElementById("bg"+i);
+            bg.style.boxShadow = 'none';
+            bg.style.transition= '0.5s';
+            // ic.style.textShadow = 'none';
+            ic.style.color = '#222';
+            ic.style.transition = '0.5s';
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <div id="bg1" class="box" onmouseover="glow(1)" onmouseout="normal(1)"><li id="icon1"><i class="fa fa-facebook-official" aria-hidden="true"></i></li></div>
+        <div id="bg2" class="box" onmouseover="glow(2)" onmouseout="normal(2)" ><li id="icon2"><i class="fa fa-instagram" aria-hidden="true"></i></li></div>
+        <div id="bg3" class="box" onmouseover="glow(3)" onmouseout="normal(3)"><li id="icon3" style="margin-left: 18px;"><i class="fa fa-envelope" aria-hidden="true"></i></li></div>
+        <div id="bg4" class="box" onmouseover="glow(4)" onmouseout="normal(4)"><li id="icon4"><i class="fa fa-twitter" aria-hidden="true"></i></li></div>
+    </ul>
+</body>
+</html>
