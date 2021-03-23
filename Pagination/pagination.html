@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .bar ul
+        {
+            color: #222;
+            list-style: none;
+            display: inline-flex;
+            background:transparent;
+        }
+        li
+        {
+            margin: 0px;
+            padding: 22px;
+           background: #111;
+            transition: 0.2s;
+            transform: translateY(0);
+            
+        }
+         li:hover 
+        {
+            transform: translateY(-15px);
+            transition: 0.2s;
+            cursor: pointer;
+            background: #2196f3;
+            color:#fff;
+            box-shadow: 0px 0px 40px rgba(0,0,0,0.7),0px 0px 40px rgba(0,0,0,0.7);
+        }
+        li:first-child:hover
+        {
+            background-color: green;
+            color: #fff;
+        }
+        li:last-child:hover
+        {
+            background-color: green;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <ul>
+            <li><<</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>>></li>
+        </ul>
+    </div>
+</body>
+</html>
