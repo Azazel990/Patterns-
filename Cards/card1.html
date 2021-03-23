@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .box
+        {
+            height: 200px;
+            width: 200px;
+            border: 2px solid #fff;
+        }
+        .box img
+        {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        .box .info
+        {
+            position: relative;
+            height: 100%;
+            width: 200px;
+            color: #fff;
+            font-size: 10px;
+            border: 2px solid #fff;
+            margin-top: -205px;
+            background: #FF1A55;
+            transform: scale(0);
+        }
+        .box .info p{
+            padding: 15px ;
+            opacity: 0;
+        }
+        .box  button
+        {
+            position: absolute;
+            margin-left: 170px;
+            margin-top: -35px;
+            border-radius: 50%;
+            outline: none;
+            z-index: 5;
+        }
+    </style>
+    
+    <script>
+        var i = 0;
+        function show()
+        {
+            var l = document.getElementById("data");
+            var p = document.getElementById("para");
+            if(i%2==0)
+            {
+                p.style.opacity = '1'
+                l.style.transition = '0.4s';
+                l.style.transform = 'scale(1)';
+                i++;
+            }
+            else
+            {
+                l.style.transition = '0.4s';
+                l.style.transform = 'scale(0)';
+                i++;
+            }
+                  
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+    <img src="2.jpg">
+   
+    <div class="info" id="data">
+       <p id="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quos suscipit quis ratione eos reprehenderit debitis id non, dicta saepe sunt ex excepturi quisquam alias odit sed voluptatem consectetur aspernatur.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit asperiores impedit incidunt, eligendi minus repellendus tempore illum amet corrupti omnis, optio eaque, quo dolor qui possimus ut quia doloribus!
+    </p>
+    </div>
+    <button onclick="show()">+</button>
+</div>
+</body>
+</html>

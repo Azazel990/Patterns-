@@ -1,0 +1,204 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color:#222;
+            font-family: sans-serif;
+        }   
+        .container
+        {
+            margin-top: 50px;
+            height: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .container .box
+        {
+            height: 300px;
+            width: 300px;
+            margin: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding: 0;
+        }
+        .container .box .imgbox
+        {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            height: 300px;
+         }
+        .container .box .imgbox img
+        {
+            height: 300px;
+            max-width: 100%;
+          
+            transition: 0.3s;
+        }
+        .container .box:hover .imgbox img
+        {   
+            
+            transform: scale(1.2);
+            transition: 0.3s;
+        }
+        .container .box .info
+        {
+            position: absolute;
+            height: 250px;
+           max-width: 300px;
+            margin-top: 0;
+            background: rgba(0,0,0,0.7);
+            margin-top: -275px;
+            transform: rotateX(90deg);
+            word-wrap: break-word;
+           transition: 0.3s;
+           padding: 0 ;
+
+        }
+        .container .box:hover .info
+        {
+            transform: rotateX(0);
+            transition: 0.3s;
+        }
+        .container .box .info h1
+        {
+            color: #ff0;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+        .container .box .info p{
+            color: #fff;
+           padding: 15px;
+           margin-top: -20px;
+           font-size: 15px;
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="box">
+            <div class="imgbox">
+                <img src="pics/cam.jpg">
+            </div>
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgbox">
+                <img src="pics/1.jpg">
+            </div>
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgbox">
+                <img src="pics/2.jpg">
+            </div>
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgbox">
+                <img src="pics/3.jpg">
+            </div>
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgbox">
+                <img src="pics/4.jpg">
+            </div>
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="box" >
+            <div class="imgbox">
+                <img src="pics/5.jpg">
+            </div>
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgbox">
+                <img src="pics/6.jpg">
+            </div>  
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgbox">
+                <img src="pics/7.jpg">
+            </div>  
+            <div class="info">
+                <h1>Heading </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sequi similique aspernatur, 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dignissimos incidunt quod illo quae odio quaerat nostrum alias quis tempore cupiditate quam architecto id, voluptate provident rerum. Accusantium, beatae architecto?
+
+
+                </p>
+            </div>
+        </div>
+
+</div>
+</body>
+</html>

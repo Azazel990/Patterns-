@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+    <title>card-9</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: #111;
+                
+        }
+        .container
+        {
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            height: 550px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card
+        {
+            position: relative;
+            height: 400px;
+            width: 300px;
+            /* border: 1px solid red; */
+            margin: 50px;
+            transition: 0.3s;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .info
+        {
+            position: absolute;
+            /* border: 2px solid #ff0; */
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: #fff;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .info h1
+        {
+            /* position: relative; */
+            text-align: center;
+            font-family: sans-serif;
+           z-index: 2;
+           margin-top: 25px;
+        }
+        .info p
+        {
+            padding: 25px;
+            margin-top: -25px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+      
+         .wrapper
+        {
+            position: relative;
+            margin-top: 0;
+            margin-left: 0;
+            height: 400px;
+            width: 100%;
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 100%, 0 100%);
+            transition: 0.3s ease-in-out;
+            overflow: hidden;
+        }
+       
+        .wrapper h1
+        {
+            position: relative;
+            color: #fff;
+            font-family: sans-serif;
+            font-size: 8em;
+        }
+        .card:nth-child(1) .wrapper
+        {
+           background: #0575E6;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to top, #021B79, #0575E6); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ ri 7+*/
+
+        }
+           
+      .card:nth-child(2) .wrapper
+        {
+            background: #093028 !important;  /* fallback for old browsers */ 
+            background: -webkit-linear-gradient(to right, #237A57, #093028) !important;  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #237A57, #093028) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .card:nth-child(3) .wrapper
+        {
+            background: #F3904F;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .card:hover .wrapper
+        {
+            transition: 0.3s;
+            transform: scale(0.2) translateY(-825px) translateX(-495px);
+            /* border-bottom-left-radius: 500px ;
+            border-bottom-right-radius: 500px ; */
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 46%, 50% 46%, 0% 75%);
+            box-shadow: 20px 20px 40px rgba(0,0,0,0.5), 20px 20px 40px rgba(0,0,0,0.5);
+        }
+       
+        
+        .card:hover .wrapper h1
+        {
+            margin-top: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="card">
+            <div class="wrapper">
+                <h1>01</h1>
+            </div>
+            <div class="info">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cum odit nostrum perferendis explicabo ad beatae in, alias molestias incidunt ipsa quaerat, quo omnis ullam impedit suscipit laboriosam cupiditate dignissimos.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui commodi similique adipisci 
+
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrapper">
+                <h1>02</h1>
+            </div>
+            <div class="info">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cum odit nostrum perferendis explicabo ad beatae in, alias molestias incidunt ipsa quaerat, quo omnis ullam impedit suscipit laboriosam cupiditate dignissimos.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui commodi similique adipisci 
+                    
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrapper">
+                <h1>03</h1>
+            </div>
+            <div class="info">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cum odit nostrum perferendis explicabo ad beatae in, alias molestias incidunt ipsa quaerat, quo omnis ullam impedit suscipit laboriosam cupiditate dignissimos.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui commodi similique adipisci 
+                    
+                </p>
+            </div>
+        </div>
+   
+    </div>
+    
+</body>
+</html>

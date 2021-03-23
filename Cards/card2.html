@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card-2</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* min-height: 100vh; */
+        }
+        .container
+        {
+            height: 200px;
+            width: 1200px;
+             margin: 25px; 
+           
+            display: grid;
+            grid-template-columns: repeat(auto-fit ,minmax(60px,1fr));
+			grid-gap: 40px;
+            
+        }
+        .container .card
+        {
+            position: relative;
+            height: 150px;
+            width: 100px;
+            margin: 25px; 
+            background: #Fff;
+        }
+        .container .card .wrapper
+        {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background: #4B0082;
+            transition:  0.5s;
+            visibility: ;
+        }
+        h1{
+            position: absolute;
+               padding: 0;
+               margin-left: 28px;
+               margin-top: 50px;
+               font-size: 3em;
+               color: #fff;        
+                transition: 0.5s;      
+        }
+        .card:hover .wrapper
+        {
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            margin-left: 32px;
+            margin-top: 5px;   
+            transition: 0.5s;
+        }
+        .card:hover h1{
+            font-size: 20px;
+            margin-top: 5px;
+            margin-left: 8px;
+            transition: 0.5s;
+        }
+
+        .card  p{
+            position: absolute ;
+            margin-top: 32px;
+            font-size: 5.5px;
+            font-weight: bold;
+            color: #111;
+            font-family: sans-serif;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quidem aliquam sed ullam magni cum incidunt sequi! Harum ab ea ipsum sunt inventore placeat quibusdam nemo, tenetur eveniet temporibus numquam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et quis eius quod hic sint, repudiandae eligendi in quisquam tempora unde. Provident inventore atque harum. Totam delectus eaque hic suscipit?
+                    </p>
+            <div class="wrapper"><h1>01</h1></div>
+            <div class="info">
+        </div>
+        </div>
+      
+
+        <div class="card">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam maxime dolorem quaerat, possimus explicabo, rerum laborum eius vero vitae et accusamus, placeat fugit rem dolorum obcaecati. Aut in sunt nulla!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus excepturi commodi libero. Cumque, perspiciatis! Iure tempore itaque maiores sit quibusdam quod exercitationem? Aperiam nihil enim, error unde repellat laudantium.
+            </p>
+            <div class="wrapper"> <h1>02</h1></div>
+            <div class="info">
+           
+            </div>
+        </div>
+
+        <div class="card">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita accusamus ipsum a, necessitatibus dicta non similique maiores est voluptas nostrum molestiae consectetur dolore delectus voluptates beatae enim assumenda, quibusdam animi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat explicabo veritatis ipsum perferendis aliquam sapiente libero inventore quibusdam doloremque,
+            </p>
+        <div class="wrapper"> <h1>03</h1> </div>
+        <div class="info">
+           
+        </div>
+        </div>
+  
+    </div>
+</body>
+</html>

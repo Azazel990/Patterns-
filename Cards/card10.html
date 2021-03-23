@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <title>Card-10</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: #16132A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container
+        {
+            position: relative;
+            height: 550px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .card
+        {
+            height: 400px;
+            width: 300px;
+            cursor: pointer;
+            margin: 45px;
+            overflow: hidden;
+        }
+        .card .info
+        {
+            position: relative;
+            height: 400px;
+            width: 100%;
+          
+            background: #fff;
+            overflow: hidden;
+        }
+        .info h1
+        {
+            font-family: Montserrat;
+            text-align: center;
+            margin-left: 0%;
+            margin-top: 50px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            transform: translateX(200px);      
+            transition: 0.3s;
+            opacity: 0;
+        }
+        .info p
+        {
+            font-family: Lato;
+            padding-left: 45px;
+            margin-top: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+            transform: translateX(300px);
+            word-wrap: break-word;
+            opacity: 0;
+        }
+        .card .layer
+        {
+            position: relative;
+            margin-top: -400px;
+            height: 402px;
+            width: 300px;
+            background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: Lato;
+            font-size: 3em;
+            clip-path: polygon(0 0, 100% 0, 100% 100% , 0% 100%);
+           
+           
+           transition: clip-path 0.3s ease-in-out;
+        }
+        .card:hover .layer
+        {
+            clip-path: polygon(0 0, 100% 0, 10% 9%, 0 100%);
+            transition: 0.3s;
+            box-shadow: 20px 20px 40px rgba(0,0,0,0.7);   
+        }
+        .card:hover .layer h1
+        {
+            transform: translate(-105%,-160%) scale(0.2);
+            transition: 0.3s;
+        }
+        .card .layer h1
+        {
+            transition: 0.3s;
+        }
+        .card:hover .info h1
+        {
+            transform: translateX(0px);
+            transition: 0.3s;
+            transition-delay: 0.2s;
+            opacity: 1;
+        }
+        .card:hover .info p
+        {
+            transform: translateX(0px);
+            transition: 0.3s;
+            transition-delay: 0.4s;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="card">
+            <div class="info">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non explicabo illo libero porro, totam provident placeat veritatis impedit nostrum suscipit corrupti laudantium dolore facilis iusto nulla magni doloribus ea asperiores?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sapiente quo ad iusto. Voluptatibus beatae fuga accusamus fugit labore, nobis dolores qui voluptates, dolore sapiente quis aliquam nisi quaerat totam!
+
+                </p>
+            </div>
+            <div class="layer">
+                <h1>01</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="info">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non explicabo illo libero porro, totam provident placeat veritatis impedit nostrum suscipit corrupti laudantium dolore facilis iusto nulla magni doloribus ea asperiores?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sapiente quo ad iusto. Voluptatibus beatae fuga accusamus fugit labore, nobis dolores qui voluptates, dolore sapiente quis aliquam nisi quaerat totam!
+                    
+                </p>
+            </div>
+            <div class="layer">
+                <h1>02</h1>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="info">
+                <h1>Heading</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non explicabo illo libero porro, totam provident placeat veritatis impedit nostrum suscipit corrupti laudantium dolore facilis iusto nulla magni doloribus ea asperiores?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sapiente quo ad iusto. Voluptatibus beatae fuga accusamus fugit labore, nobis dolores qui voluptates, dolore sapiente quis aliquam nisi quaerat totam!
+                    
+                </p>
+            </div>
+            <div class="layer">
+                <h1>03</h1>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

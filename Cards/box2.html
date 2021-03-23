@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxModel</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+           overflow-x: hidden;
+            font-family: sans-serif;
+        }
+        .container
+        {   
+            position: relative;
+            height: 600px;
+            width: 100%;
+            z-index: 1;
+            margin-top: 70px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .container .card
+        {
+            height: 300px;
+            width: 300px;
+            margin: 0;
+      
+           
+        }
+        .container .card .imgbox
+        {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        .container .card .imgbox img
+        {
+            position: relative;
+            max-width: 100%;
+            height: 300px;
+            transition: 0.3s;
+        }
+        .container .card:hover img
+        {
+            transition: 0.3s;
+            transform: translateX(-300px);
+        }
+        .container .card .info
+        {
+            position:absolute;
+            background: #000;
+            color: #fff;
+            height: 300px;
+            width: 300px;
+            margin-top: -300px;
+          
+            z-index: -1 ;
+            transition: 0.3s;
+            overflow: hidden;
+            transform: translateX(300px);
+            opacity: 0;
+        }
+        .card .info h2
+        {
+            text-align: center;
+            font-size: 35px;
+            color: #ff0;
+        }
+        .card .info p
+        {
+            padding: 20px;
+            margin-top: -25px;
+        }
+        .card:hover .info
+        {
+            transition: 0.3s;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/beverage-1869716_1920.jpg"> 
+            </div>
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/eggs.jpg"> 
+
+            </div>  
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/hoodie-691449_1920.jpg"> 
+
+            </div>
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/roses-1245869_1920.jpg"> 
+                
+            </div>
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/cat-4977436_1920.jpg"> 
+
+            </div>
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/audience-1868137_1920.jpg"> 
+
+            </div>
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/umbrella-801918_1920.jpg"> 
+
+            </div>
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="pics/startup-593341_1920.jpg"> 
+
+            </div>
+            <div class="info">
+                <h2>Heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi accusamus nostrum, sapiente, accusantium vero laborum libero corrupti amet tempore impedit deserunt alias corporis dolorum! Ut repellendus sit maxime minus totam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, adipisci enim aperiam, 
+                </p>
+            </div>
+        </div>
+
+
+    </div>    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imgreflect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        .imgbox
+        {
+            height: 400px;
+            width: 400px;
+        }
+        .imgbox img
+        {
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            transform-origin: center;
+            /* transform: perspective(800px) rotateY(20deg); */
+            transition: 0.3s;
+            /* opacity: 0.2; */
+            -webkit-box-reflect: below 10px linear-gradient(transparent,transparent,#000);
+        }
+        .imgbox:hover img
+        /* {
+            transform: perspective(800px) rotateY(0deg); */
+            transition: 0.3s;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgbox">
+        <img src="pics/hoodie-691449_1920.jpg">
+    </div>
+</body>
+</html>

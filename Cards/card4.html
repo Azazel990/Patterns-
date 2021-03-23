@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+    <title>Card-4</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .container
+        {
+            height: 550px;
+            width: 1200px;
+           
+            display: grid;
+            grid-template-columns: repeat(auto-fit ,minmax(0px,1fr));
+			grid-gap: 40px;            
+        }
+        .container .card
+        {
+            position: relative;
+            height: 400px;
+            width: 300px;
+            box-shadow: 20px 20px 40px rgba(0,0,0,0.8),20px 20px 40px rgba(0,0,0,0.8);
+            margin: 50px;
+            cursor: pointer;
+        }
+        .container .card .imgbox
+        {
+            position: relative;
+            height: 400px;
+            width: 300px;
+            z-index: -2;
+        }
+        .imgbox img{
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        .card .info
+        {
+            position: relative;
+            color : #fff;
+            height: 80px;
+            width: 300px;
+            background:rgba(0,0,0,0.8);
+            margin-top: -80px;
+            z-index: -1;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .card:hover .info
+        {
+            height: 400px;
+            margin-top: -400px;
+            transition: 0.3s;
+            
+        }
+      
+        .card:hover .list li
+        {
+            opacity: 0;
+            animation: up 0.3s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.1s;
+         }
+         .card:hover .list li:nth-child(1)
+         {
+            animation-delay: 0.2s;
+         }
+         
+         .card:hover .list li:nth-child(2)
+         {
+            animation-delay: 0.4s;
+         }
+         
+         .card:hover .list li:nth-child(3)
+         {
+            animation-delay: 0.6s;
+         }
+         
+         .card:hover .list li:nth-child(4)
+         {
+            animation-delay: 0.8s;
+         }
+         
+         .card:hover .list li:nth-child(5)
+         {
+            animation-delay: 1s;
+         }
+        @keyframes up
+        {
+            0%
+            {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100%
+            {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        .info ul 
+        {
+            list-style: none;
+            margin-left: -25px;
+            margin-top: 45px;
+        }
+        ul li
+        {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        li span
+        {
+            margin-left: 15px;
+        }
+        .ans
+        {
+            position: relative;
+            margin-top: -225px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="card">
+            <div class="imgbox">
+                <img src="p1.jpg">
+            </div>
+            <div class="info">
+                <h1>Lucas Fernendez</h1>
+                <hr>
+            <div class="list">
+                <ul>
+                    <li> Name      :    </li>
+                    <li>Job Title :    </li>
+                    <li>Age       :     </li>
+                    <li>Education :    </li>
+                </ul>
+                <div class="ans">
+                <ul >
+                    <li>Lucas Peters</li>
+                    <li>Web Dev</li>
+                    <li>30</li>
+                    <li>Engineer</li>
+                </ul>
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgbox">
+                <img src="p2.jpg">
+
+            </div>
+            <div class="info">
+                <h1>Sam Vilkins</h1>
+                <hr>
+                <div class="list">
+                <ul>
+                    <li>Name : </li>
+                    <li>Job Title : </li>
+                    <li>Age : </li>
+                    <li>Education : </li>
+                </ul>
+                <div class="ans">
+                <ul>
+                    <li>Sam Vilikns</li>
+                    <li>Accountant </li>
+                    <li>32</li>
+                    <li>MCom</li>
+                </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="imgbox">
+                <img src="p3.jpg">
+
+            </div>
+            <div class="info">
+                <h1>John Doe</h1>
+                <hr>
+                <div class="list">
+                <ul>
+                   
+                    <li>Name : </li>
+                    <li>Job Title : </li>
+                    <li>Age : </li>
+                    <li>Education : </li>
+                </ul>
+
+                <div class="ans">
+                <ul>
+                    <li>John Doe</li>
+                    <li>Manager</li>
+                    <li>40</li>
+                    <li>M.B.A</li>
+                </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

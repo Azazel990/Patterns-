@@ -1,0 +1,136 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Card-12</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: #12212B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card
+        {
+            position: relative;
+            height: 400px;
+            width: 300px;
+            box-shadow: -5px -5px 10px rgba(255,255,255,0.05),5px 5px 10px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            transition: 0.3s;
+            overflow: hidden;
+        }
+        .card .info
+        {
+            position: relative;
+            height: 70%;
+            width: 100%;
+            margin-top: 40%;
+            transform: translateY(100%);
+            transition: 0.3s;
+            opacity: 0;
+        }
+        .card .info p
+        {
+            position: relative;
+            padding: 25px;
+            font-family: Lato;
+            color:#fff;
+            margin-top: 35px;
+            text-shadow: -5px -5px 10px rgba(255,255,255,0.05),5px 5px 15px rgba(0,0,0,0.5);
+        }
+        .info ul
+        {
+            list-style-type: none;
+            display: flex;
+            height: 100px;
+            margin-top: -15px;
+            padding-left: 50px;
+            width: 100%;
+            background: #12212B;
+        }
+        .info ul li
+        {
+           margin-left: 15px;
+           font-size:2em;
+            color: #12212B;
+            text-shadow: -2px -2px 5px rgba(255,255,255,0.05),2px 2px 5px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+        ul li:hover
+        {
+            cursor: pointer;
+            color: crimson;
+            transform: translateY(-4px);
+            transition: transform 0.3s;
+        }
+        .card:hover .info
+        {
+            transform: translateY(0px);
+            transition: 0.3s;
+            opacity: 1;
+        }
+        .card .layer
+        {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .layer img
+        {
+            margin-left: 50px;
+            margin-top: 50px;
+            border-radius: 50%;
+            box-shadow: -5px -5px 10px rgba(255,255,255,0.05),5px 5px 15px rgba(0,0,0,0.5);
+        }
+        .layer h1
+        {
+            color: crimson;
+            text-align: center;
+            text-shadow: -5px -5px 10px rgba(255,255,255,0.05),5px 5px 15px rgba(0,0,0,0.5);
+            font-family: Montserrat;
+            font-weight: 5000;
+            letter-spacing: 3px;
+            
+        }
+        .card:hover .layer
+        {
+            transform: scale(0.5) ;
+            margin-top: -35%;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+    
+            <div class="layer">
+                <img src="passport/head.jpg" alt="">
+                <h1>John Doe</h1>
+            </div>
+        <div class="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eaque similique sit eius nisi ipsam, beatae iste libero veritatis maxime voluptate, non incidunt repellendus a voluptatem maiores. Ipsa, eum dignissimos.
+                
+            </p>
+            <ul>
+                <li ><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+                <li ><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
+                <li ><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                <li ><i class="fa fa-twitter" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

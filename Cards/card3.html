@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD-3</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color : #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .card
+        {
+            position: relative;
+            height: 400px;
+            width: 520px;
+            z-index: 2;
+        }
+        .card .imgbox
+        {
+           position: relative;
+           margin-left: 0;
+           margin-top: 0;
+           height: 400px;
+           width: 500px;
+           padding-left: 20px;
+           z-index: -2;
+        }
+        .imgbox img
+        {
+            height: 100%;
+            width: 100%;
+        }
+        .card .content
+        {
+            position: relative;
+            height: 50px;
+            width: 20px;
+           background: #fff;
+            margin-top: -240px;
+            z-index: -1;
+            transition: 0.3s;
+           border-top-left-radius: 100%;
+           border-bottom-left-radius: 100%;
+        }
+        .content p{
+            position: relative;
+            padding: 25px;
+            font-size: 22px;
+            visibility: hidden;
+           }
+           .card:hover .content
+           {
+               width: 500px;
+               margin-left: 20px;
+               transition: 0.3s;    
+               margin-top: -422px;
+               background-color: rgba(0, 0, 0,0.7);
+               border-top-left-radius: 0;
+               border-bottom-left-radius: 0;
+               height: 400px;
+               cursor: pointer;
+           }
+           .card:hover p
+           {
+               visibility: visible;
+               transition-delay: 0.2s;
+           }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="imgbox">
+            <img src="1.jpg">
+        </div>
+        <div class="content">
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique rerum accusantium fugiat quae repudiandae doloribus nobis vel accusamus vitae minima voluptates temporibus, assumenda reprehenderit sunt hic itaque obcaecati quas voluptatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum illo vero dolor consequuntur laudantium qui voluptatibus possimus iure, veritatis, accusantium quo? Fugit possimus architecto ducimus atque blanditiis porro praesentium deleniti.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
