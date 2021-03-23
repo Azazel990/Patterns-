@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+        h1
+        {
+            font-size: 4em;
+            letter-spacing: 10px;
+            font-family: sans-serif;
+            text-transform: uppercase;
+        }
+        h1::before
+        {
+            content: attr(data-text);
+            position: absolute;
+            color: #fff;
+            transform: rotateX(180deg);
+            transform-origin: bottom;
+            margin-top: 0px;
+            margin-left: 0px;
+            line-height: 1em;
+            background: linear-gradient(0deg, #333 0,rgba(0,0,0,0.7) 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-text="Reflection">Reflection</h1>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading-1</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        ul
+        {
+            list-style: none;
+            display: inline-flex;
+            font-family: sans-serif;
+        }
+        ul li
+        {
+            margin: 15px;
+            font-size: 70px;
+            color: #111;
+            animation : load 1.5s linear;
+            animation-iteration-count: infinite;
+        }
+        li:nth-child(1)
+        {
+            animation-delay: 0s;
+        }
+        li:nth-child(2)
+        {
+            animation-delay: 0.2s;
+        }
+        li:nth-child(3)
+        {
+            animation-delay: 0.4s;
+        }
+        li:nth-child(4)
+        {
+            animation-delay: 0.6s;
+        }
+        li:nth-child(5)
+        {
+            animation-delay: 0.8s;
+        }
+        li:nth-child(6)
+        {
+            animation-delay: 1.0s;
+        }
+        li:nth-child(7)
+        {
+            animation-delay: 1.2s;
+        }
+        @keyframes load
+        {
+            0%,100%
+			{
+				color: #fff;
+				filter: blur(2px);
+				text-shadow: 0 0 10px #00b3ff,
+							0 0 20px #00b3ff,
+							0 0 40px #00b3ff,
+							0 0 80px #00b3ff,
+							0 0 120px #00b3ff,
+							0 0 200px #00b3ff,
+							0 0 300px #00b3ff,
+							0 0 400px #00b3ff;
+                transform: translateY(-30px);
+			}
+			5%,95%
+			{
+				color: #111;
+				filter: blur(0px);
+				text-shadow:  none;
+                transform: translateY(0px);
+			}
+        }
+    </style>
+    </head>
+    <body>
+        <div class="load">
+            <ul>
+                <li>L</li>
+                <li>O</li>
+                <li>A</li>
+                <li>D</li>
+                <li>I</li>
+                <li>N</li>
+                <li>G</li>
+            </ul>
+        </div>
+    </body>
+    </html>
