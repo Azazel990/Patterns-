@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button-1</title>
+    <style>
+     body
+    {
+        margin: 0;
+        padding: 0;
+        background-color:#111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    a
+    {
+        font-family: sans-serif;
+        position: relative;
+        color: #fff;
+        /* border: 2px solid #fff; */
+        padding: 10px;
+        width: 100px; 
+        text-align: center;
+        cursor: pointer;  
+        text-transform: uppercase;
+        box-sizing: border-box;
+        transition: 0.5s;
+        /* crimson */
+    }
+
+    a::before
+    {
+        content: '';
+        position: absolute;
+        bottom: -6%;
+        left: 50%;
+        height: 2px;
+        width: 50%;
+        background: crimson;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: right;
+    }
+    a:hover::before
+    {
+        
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        transform-origin: left;
+    }
+
+    a::after
+    {
+        content: '';
+        position: absolute;
+        bottom: -6%;
+        right: 50%;
+        height: 2px;
+        width: 50%;
+        background: crimson;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+    }
+    a:hover::after
+    {
+        
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        transform-origin: right;
+    }
+
+    .up
+    {
+        position: absolute;
+        height: 38px;
+        width: 100px; 
+        /* background: crimson; */
+        z-index: 1;
+       left: 0;
+       top: 0;
+    }
+    .up::after
+    {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 2px;
+        height: 42px;
+        background: crimson;
+        transform:  scaleY(0);
+        transition: transform 0.3s;
+        transform-origin: top;
+    }
+    .up:hover::after
+    {
+        transform:  scaleY(1);
+        /* transition: transform 0.3s; */
+        transition-delay: 0.2s;
+        transform-origin: bottom;
+    }
+
+    .up::before
+    {
+        content: '';
+        position: absolute;
+        top: -2px;
+        right:2px;
+        width: 2px;
+        height: 42px;
+        background: crimson;
+        transform:  scaleY(0);
+        transition: transform 0.3s;
+        transform-origin: top;
+    }
+    .up:hover::before
+    {
+        transform:  scaleY(1);
+        /* transition: transform 0.3s; */
+        transition-delay: 0.2s;
+        transform-origin: bottom;
+    }
+    
+    .sideleft
+    {
+        content: '';
+        position: absolute;
+      top: -2px;
+       z-index: 4;
+        left: 0;
+        height: 2px;
+        width: 50px;
+        background:crimson;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: right;
+    }
+    .slideright
+    {
+        content: '';
+        position: absolute;
+      top: -2px;
+       z-index: 5;
+        right: 0;
+        height: 2px;
+        width: 50px;
+        background:crimson;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+    }
+   
+   
+ 
+    </style>
+    <script>
+        function upleft()
+        {
+            var sl = document.getElementById("sl");
+            
+
+            sl.style.transform = 'scaleX(1)';
+            sl.style.transition = 'transform 0.3s';
+            sl.style.transformOrigin = 'left';
+            sl.style.transitionDelay = '0.5s'
+        }
+        function col()
+        {
+            var col = document.getElementById("col");
+            col.style.backgroundColor = "crimson";
+            col.style.transition = '0s'
+            col.style.transitionDelay = '0.8s';
+            col.style.boxShadow = '0 0 80px crimson,0 0 80px crimson';
+        }
+        function upright()
+        {
+            var sr = document.getElementById("sr");
+            sr.style.transform = 'scaleX(1)';
+            sr.style.transition = 'transform 0.3s';
+            sr.style.transformOrigin = 'right';
+            sr.style.transitionDelay = '0.5s'
+        }
+        function normal()
+        {
+            var sl = document.getElementById("sl");
+            var sr = document.getElementById("sr");
+            var col = document.getElementById("col");
+            col.style.backgroundColor = "#111";
+            col.style.transition = '0s'
+            col.style.boxShadow = 'none';
+
+            sl.style.transform = 'scaleX(0)';
+            sl.style.transition = 'transform 0.3s';
+            sl.style.transformOrigin = 'left';
+
+
+            sr.style.transform = 'scaleX(0)';
+            sr.style.transition = 'transform 0.3s';
+            sr.style.transformOrigin = 'right';
+
+        }
+    </script>
+</head>
+<body>
+    <a id="col">CLICK <div class="up" onmouseover="upleft(),upright(),col()" onmouseout="normal()"></div> 
+        <div class="sideleft" id="sl"></div>
+        <div class="slideright" id="sr"></div>
+    </a>
+    
+</body>
+</html>

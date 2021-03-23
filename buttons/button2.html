@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button 2</title>
+    <style>
+    body
+    {
+        margin: 0;
+        padding: 0;
+        background-color:#000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    a
+    {
+        font-family: sans-serif;
+        position: relative;
+        color: #fff;
+       letter-spacing: 3px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;  
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-size: 3em;
+        width: 300px;
+        padding: 25px;
+    }
+    a::before{
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: -2px;
+        height: 2px;
+        width: 150px;
+        background-color: crimson;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: right;
+    }
+    a:hover::before
+    {
+        
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        transform-origin: right;
+    }
+    a::after{
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        height: 2px;
+        width: 154px;
+        background-color: crimson;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+    }
+    a:hover::after
+    {
+        
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        transform-origin: left;
+    }
+    .layer1
+    {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        top: 0;
+        left: 0;
+    }
+    .layer1::before
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -2px;
+        height: 100%;
+        width: 2px;
+        background: crimson;
+        transform: scaleY(0);
+        transition: transform 0.3s;
+        transform-origin: bottom;
+        
+    }
+    a:hover .layer1::before
+    {
+        transform: scaleY(1);
+        transition: transform 0.3s;
+        transform-origin: bottom;
+        transition-delay: 0.3s;
+    }
+    
+    .layer1::after
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -2px;
+        height: 100%;
+        width: 2px;
+        background: crimson;
+        transform: scaleY(0);
+        transition: transform 0.3s;
+        transform-origin: bottom;
+        
+    }
+    a:hover .layer1::after
+    {
+        transform: scaleY(1);
+        transition: transform 0.3s;
+        transform-origin: bottom;
+        transition-delay: 0.3s;
+    }
+    .layer2
+    {
+        position: absolute;
+        height: 105px;
+        width: 300px;
+        background:transparent;
+       top: 0;
+       left: 0;
+    }
+    .layer2::before
+    {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        height: 2px;
+        width: 156px;
+        background: crimson;
+        transform: scaleX(0);
+        transition: trasnform 0.3s;
+        transform-origin: left;
+    }
+    a:hover  .layer2::before
+    {
+        transform:  scaleX(1);
+        transition: transform 0.3s;
+        transition-delay: 0.6s;
+        transform-origin: left;
+    }
+
+    .layer2::after
+    {
+        content: '';
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        height: 2px;
+        width: 50%;
+        background: crimson;
+        transform: scaleX(0);
+        transition: trasnform 0.3s;
+        transform-origin: right;
+    }
+    a:hover  .layer2::after
+    {
+        transform:  scaleX(1);
+        transition: transform 0.3s;
+        transition-delay: 0.6s;
+        transform-origin: right;
+    }
+    a:hover
+    {
+        background-color: crimson;
+        box-shadow: 0px 0px 40px crimson;
+        transition-delay: 1s;
+    }
+    </style>
+</head>
+<body>
+    <a href="#">Click
+        <div class="layer1"></div>
+        <div class="layer2"></div>
+    </a>
+    
+</body>
+</html>

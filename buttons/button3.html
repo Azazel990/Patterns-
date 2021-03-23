@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <title>Button-3</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        a
+        {
+            position: relative;
+            height: 100px;
+            width: 225px;
+            border: 2px solid #2196f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            text-decoration: none;
+            color: #2196f3;
+        }
+        a:before
+        {
+            position: absolute;
+            content: 'CLI';
+            height: 75%;
+            width: 50.5%;
+            top: 0;
+            left: 0;
+            text-align: right;
+            padding-top: 25px;        
+            color: #2196f3;
+            background: #fff;
+            transform: rotateX(0deg) translateY(0px);
+            transform-origin: top;
+            transition: 0.3s;
+        }
+        a:hover::before
+        {
+            transition: 0.3s;
+            transform: rotateX(-90deg) translateY(30px);
+            transform-origin: top;
+        }
+        a::after
+        {
+            position: absolute;
+            content: 'CK';
+            height: 75%;
+            width: 50.5%;
+            top: 0;
+            right: 0;
+            text-align: left;
+            padding-top: 25px;        
+            color: #2196f3;
+            background: #fff;
+            transform: rotateX(0deg) translateY(0px);
+            transform-origin: bottom;
+            transition: 0.3s;
+        }
+        a:hover::after
+        {
+            transition: 0.3s;
+            transform: rotateX(90deg) translateY(30px);
+            transform-origin: bottom;
+        }
+        span
+        {
+            position: absolute;
+            height: 100px;
+            width: 225px;
+            z-index: -1;
+            background: transparent;
+        }
+        span::before
+        {
+            content: 'HE';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 75%;
+            width: 50%;
+            
+            background: #2196d3;
+            color: #fff;
+            text-align: right;
+            font-size: 2em;
+            padding-top: 12%;
+            transform-origin: bottom;
+            transform: rotateX(90deg) translateY(30px);
+            transition: 0.3s;
+        }
+        span::after
+        {
+            content: 'RE';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 75%;
+            width: 50%;
+            background: #2196d3;
+            color: #fff;
+            text-align: left;
+            font-size: 2em;
+            padding-top: 12%;
+           
+            transform: rotateX(-90deg) translateY(30px);
+            transform-origin: top;
+            transition:.3s;
+        }
+        a:hover ~ span::before
+        {
+            transform: rotateX(0deg) translateY(0px);
+            transform-origin: bottom;
+            transition: 0.3s;
+        }
+        a:hover ~ span::after
+        {
+            transform: rotateX(0deg) translateY(0px);
+            transform-origin: top;
+            transition: .3s;
+        }
+    </style>
+</head>
+<body>
+   <a href="#" ></a>
+   <span> </span>
+</body>
+</html>
