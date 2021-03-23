@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quotes</title>
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrapp.css">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+	<style type="text/css">
+		.w3-container{
+			padding: 15px 0px 15px 20px; 	
+		}
+		i{
+			font-weight: bold;
+			font-family: sans-serif;
+		}
+		blockquote:hover{
+			transition: box-shadow 0.5s;
+			cursor: pointer;
+			box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.5),8px 8px 8px 8px rgba(0,0,0,0.5);
+		}
+.slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  .w3-btn{
+  	background-color: transparent;
+  }
+  	span
+	{
+		color: white;
+		cursor: pointer;
+		margin-right: 25px;
+		margin-top: 10px; 
+	}
+	.w3-modal-content
+	{
+		padding-right: 0px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.mod
+	{
+		margin: 0;
+		padding: 0;
+	}	
+	.par
+	{
+		background-color:  rgb(97,97,97);
+		margin-top: 0;
+		margin-bottom : 0;
+		padding: 35px;
+	}
+	
+	</style>
+	<script >
+		$(document).ready(function(){
+		 $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+});
+	</script>
+</head>
+
+<body>
+	<div class="jumbotron  w3-leftbar w3-topbar w3-red w3-animate-top" style="padding: 35px 0px 35px 0px;">
+		<div class="w3-container"> 
+		<h3 style="text-align: center; font-size: 55px; font-family: sans-serif;"><u><i>Life Quotes</i></u></h3>
+	</div>
+	</div>
+
+	<!--quote1-->
+	<div id="id01" class="w3-modal" style="">
+  <div class="w3-modal-content w3-animate-zoom" >
+    <div class="w3-container mod" style="height:350px;">   
+
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn w3-right " style="font-size: 25px;">×</span>
+
+      <h2 class="w3-red" style="margin-top: 0; margin-bottom: 0; padding: 10px; font-size: 65px"><i>Life Quotes</i> </h2>
+      <div class="par">
+      <p style="color: white; font-size: 35px;"><i>"Make it as simple as possible but not simpler"</i></p>
+		<p style="color: white; font-size: 35px; margin-bottom: 0;margin-top: 0;">-Albert Einstein</p>
+      </div>
+      <h2 class="w3-red" style="margin-top: 0; margin-bottom: 0; padding: 10px; font-size: 65px;">-Albert Einstein</h2>
+    </div>
+  </div>
+</div>
+
+	<blockquote class="w3-container w3-leftbar w3-light-green w3-animate-bottom" >
+		<p><i>"Make it as simple as possible but not simpler"</i></p>
+		<p>-Albert Einstein</p>
+		<button onclick="document.getElementById('id01').style.display='block'" class="w3-btn ">View</button>
+	</blockquote>
+
+	<!--quote2-->
+	<div id="id02" class="w3-modal" style="">
+  <div class="w3-modal-content w3-animate-zoom" >
+    <div class="w3-container mod" style="height:350px;">   
+
+      <span onclick="document.getElementById('id02').style.display='none'" class="w3-closebtn w3-right" style="font-size: 30px;">×</span>
+
+      <h2 class="w3-red" style="margin-top: 0; margin-bottom: 0; padding: 10px; font-size: 65px"><i>Life Quotes</i> </h2>
+      <div class="par">
+      <p style="color: white; font-size: 35px;"><i>"Don’t share your secrets with people who are comfortable telling you other people’s secrets if they can do it with them they will surely do it with you"</i></p>
+		<p style="color: white; font-size: 35px; margin-bottom: 0;margin-top: 0;">-Anonomys </p>
+      </div>
+      <h2 class="w3-red" style="margin-top: 0; margin-bottom: 0; padding: 10px; font-size: 65px;">-Anonomys</h2>
+    </div>
+  </div>
+</div>
+
+	<blockquote class="w3-container w3-leftbar w3-khaki w3-animate-bottom" >
+		<p><i>“Don’t share your secrets with people who are comfortable telling you other people’s secrets if they can do it with them they will surely do it with you”</i></p>
+		<p>-Anonomys</p>
+		<button onclick="document.getElementById('id02').style.display='block'" class="w3-btn ">View</button>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-pale-red w3-animate-bottom" >
+		<p><i>“Don’t Make Promises when you are happy and don’t reply to anything when you are angry”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-light-blue w3-animate-bottom" >
+		<p><i>“Sadly you will only realize some people’s value only when they are gone”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-aqua slideanim" >
+		<p><i>“Don’t raise your voice for anyone anger can’t solve anything but has the power to destroy everything”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-sand  slideanim" >
+		<p><i>"There will come a time in life when you would need some favor at that day you would realize who your real friends are”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-blue-grey w3-animate-bottom slideanim" >
+		<p><i>“Social Medial is only good for creating an illusion that your life is so much perfect and happy even when reality is so much fucked up”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-amber slideanim" >
+		<p><i>“Words are like keys if you choose them right they and unlock any heart and shut any mouth”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-cyan slideanim" >
+		<p><i>“No matter what you do good or bad people will always talk behind your back so stop caring what they think and do whatever you were going to do”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-light-grey slideanim" >
+		<p><i>“Formal education will make you a living but self education will make you a Fortune”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-pale-red slideanim" >
+		<p><i>“Going with the flow and agreeing with everyone is very easy , standing alone or against people requires courage  and strength”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-purple slideanim" >
+		<p><i>“People will only miss you when they fail to replace you”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-teal slideanim" >
+		<p><i>“I have never met a strong person with an easy past Tough situations build strong people”</i></p>
+		<p>-Anonomys</p>
+	</blockquote>
+
+	<blockquote class="w3-container w3-leftbar w3-grey slideanim" >
+		<p style="color: white;"><i>“Keep friends that say good things behind your back and bad things to your face”</i></p>
+		<p style="color: white;">-Anonomys</p>
+	</blockquote>
+</body>
+</html>
