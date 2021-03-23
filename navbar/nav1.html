@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar-1</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrapp.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+   <style>
+       body
+       {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;     
+       }
+       .jumbotron
+       {
+           height: 550px;
+           background: url("pics/cam.jpg");
+           background-size: cover;
+           background-position: 0px -100px;
+       }
+       .jumbotron .layer
+       {
+           position: relative;
+           height: 550px;
+           width: 100%;
+           background: rgba(0,0,0,0.7);
+           margin-top: -50px;
+           /* z-index: -1; */
+       }
+       ul li
+       {
+           display: inline-block;
+           /* border: 3px solid red; */
+           margin: 0px;
+           padding-top: 20px;
+           padding-bottom: 20px;
+           padding-left: 35px;
+           padding-right: 35px;
+           cursor: pointer;
+        }
+        li:hover
+        {
+            background-color: #fff;
+            color: #000;
+        }
+        .navbar
+        {
+            position: absolute;
+            margin-bottom: 0px;
+        background: transparent;
+        z-index: 99999;
+         border: 0;
+    font-size: 18px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+    
+        }
+        .navbar:hover{
+            background: #000;
+            color: #fff;
+        }
+        .jumbotron h1
+        {
+            position: absolute;
+            color: #fff;
+            z-index: 2;
+            margin-left: 40%;
+            margin-top: 15%;
+            letter-spacing: 3px;
+        }
+        #about
+        {
+            margin-top: -30px;
+            padding: 0;
+            height: 650px !important;
+            width: 100%;
+            background-color: lightpink;
+            position: absolute;
+            overflow: visible;
+        }
+   </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>
+            <U>COMPANY</U>
+        </h1>
+        <div class="layer"></div>
+       
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <a><li>Home</li></a>
+                <a><li>About</li></a>
+                <a><li>Services</li></a>
+                <a><li>Pricing</li></a>
+                <a><li>Contact</li></a>
+                 </ul>
+            </div>
+    </nav>
+
+    <div id="about">
+       
+        <img src="pics\cam1.jpg">
+        <img src="pics\eggs.jpg">
+    </div>
+</body>
+</html>
