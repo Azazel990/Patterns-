@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <title>Intro</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: Montserrat;
+        }
+        .box
+        {
+            height: 500px;
+            width: 700px;
+            /* border: 2px solid #2196f3; */
+            
+        }
+        .sep
+        {
+            position: relative;
+            height: 150px;
+            width: 5px;
+            background-color:#2196f3;
+            margin-left: 50%;
+            margin-top: 25%;
+            animation: one 0.5s;
+            animation-fill-mode: forwards;
+            transform: scale(0);
+        }
+        .box img
+        {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            margin-left: 13%;
+            margin-top: 12.8%;
+            animation: two 0.5s;
+            animation-delay: 0.5s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        .box h1
+        {
+           position: relative;
+            color: #2196f3;
+            margin: 0;  
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 3em;
+            padding: 0;
+            margin-top: -18%;
+            margin-left: 53%;
+            animation: three 0.5s;
+            
+            animation-fill-mode: forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+        }
+        @keyframes one
+        {
+            0%
+            {
+                transform: scale(0);
+            }
+            100%
+            {
+                transform: scale(1);
+            }
+        }
+        @keyframes two
+        {
+            0%
+            {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100%
+            {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes three
+        {
+            0%
+            {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100%
+            {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="logo2.jpg" alt="">
+        <div class="sep"></div>
+        <h1>CSS</h1>
+        <br>
+        <h1 style="margin-top: -25px;">Crafts</h1>
+    </div>
+</body>
+</html>
