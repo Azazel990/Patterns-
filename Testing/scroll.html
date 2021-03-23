@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Scroll</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        header
+        {
+            margin: 0;
+            height:150px;
+            width: 100%;
+            background-color: #f4511e;
+            color: #fff;
+        }
+         header h1
+        {
+            font-size: 2.7em;
+            text-align: center;
+            margin: 0;
+            font-family: Montserrat;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 50px;
+        }
+        .container
+        {
+            position: relative;
+            height: 100vh;
+            width: 80%;
+           
+            margin-left: 6%;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        }
+        .card
+        {
+            position: relative;
+            height: 325px;
+            width: 300px;
+            background-color: #f4511e;
+            color: #fff;
+            margin: 25px;
+            box-shadow: 20px 20px 40px rgba(0,0,0,0.7),20px 20px 40px rgba(0,0,0,0.7);
+        }
+        .card img{
+            position: relative;
+            height: 250px;
+            width: 100%;
+        }
+        .card h1
+        {
+            position: relative;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 10px;
+          
+        }
+        .slideup
+        {
+            visibility:hidden;
+        }
+        .slide
+        {
+            animation-name: slide;
+            animation-duration: 1s;
+            visibility:visible;
+        }
+        @keyframes slide
+        {
+            0%
+            {
+                opacity: 0;
+                transform: translateY(75%);
+            }
+            100%
+            {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+    </style>
+    <script>
+            $(Document).ready(function(){
+                $(window).scroll(function() {
+                    $(".slideup").each(function(){
+                        var x = $(this).offset().top;
+
+                        var y = $(window).scrollTop();
+                            if (x < y + 550){
+                                $(this).addClass("slide");
+                            } 
+                    });
+                });
+            })
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Art Gallery</h1>
+    </header>
+    <div class="container">
+                   <div class="card slideup">
+                       <img src="pics/1.jpg" alt="">
+                       <h1>Location</h1>
+                   </div>  
+
+                   <div class="card slideup">
+                    <img src="pics/2.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/3.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/4.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/5.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/6.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/7.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/8.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/9.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/10.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/11.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/12.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/13.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/14.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/15.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/16.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/17.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+                <div class="card slideup">
+                    <img src="pics/18.jpg" alt="">
+                    <h1>Location</h1>
+                </div>  
+
+
+                   
+
+    </div>
+</body>
+</html>
